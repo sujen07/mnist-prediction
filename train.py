@@ -2,6 +2,10 @@ import torch
 import torchvision
 from torchvision import transforms
 from models import *
+import os
+
+out_dir = 'out'
+model_name = 'model.pth'
 
 # Define transformations for the data
 transform = transforms.Compose([
@@ -38,3 +42,6 @@ for epoch in range(2):  # loop over the dataset multiple times
         running_loss = 0.0
 
 print('Finished Training')
+os.makedirs(out_dir, exist_ok=True)
+model_path = os.path.join(out_dir, model_name)
+torch.save(model_path, model.load_state_dict())
