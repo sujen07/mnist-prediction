@@ -44,4 +44,4 @@ for epoch in range(2):  # loop over the dataset multiple times
 print('Finished Training')
 os.makedirs(out_dir, exist_ok=True)
 model_path = os.path.join(out_dir, model_name)
-torch.save(model_path, model.load_state_dict())
+torch.save(model.state_dict(), model_path)
