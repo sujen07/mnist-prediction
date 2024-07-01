@@ -11,7 +11,7 @@ This project demonstrates a simple web-based application for predicting handwrit
 
 ## Demo
 
-[Try out the Handwritten Digit Prediction here!](#)
+[Try out the Handwritten Digit Prediction here!](https://sujen07.github.io/mnist-prediction/src/)
 
 ## Project Structure
 
