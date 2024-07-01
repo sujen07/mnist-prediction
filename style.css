@@ -1,0 +1,99 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f9fc; /* Light pastel blue */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#full-board{
+    display: inline-grid;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #444;
+}
+
+#board {
+    width: 280px;
+    height: 280px;
+    border: 2px solid #bdc3c7; /* Light grey */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: #ffffff; /* White background for the canvas */
+}
+
+#clearButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #4d5bf9; /* Modern blue color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#clearButton:hover {
+    background-color: #3b49d9; /* Darker blue on hover */
+}
+
+#predictions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.radial-progress {
+    --progress: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(#4d5bf9 calc(var(--progress) * 1%), #e2e2e2 calc(var(--progress) * 1%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background 0.5s ease;
+    background: conic-gradient(#ff6b6b calc(var(--progress) * 1%), #dfe6e9 calc(var(--progress) * 1%)); /* Red gradient */
+}
+
+.radial-progress::before {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    background-color: #f7f9fc; /* Light pastel blue */
+    border-radius: 50%;
+}
+
+.digit-label, .prediction-value {
+    position: absolute;
+    font-size: 0.8em;
+    color: #333;
+    z-index: 1;
+    text-align: center;
+}
+
+.digit-label {
+    top: 35%;
+}
+
+.prediction-value {
+    top: 55%;
+}
