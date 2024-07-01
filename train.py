@@ -23,7 +23,7 @@ test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=1000, shuffle
 model = CNN()
 
 criterion = torch.nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001, )
+optimizer = torch.optim.Adam(model.parameters(), lr=0.0001,)
 
 for epoch in range(2):  # loop over the dataset multiple times
     running_loss = 0.0
