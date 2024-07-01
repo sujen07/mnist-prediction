@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>Handwritten Digit Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Handwritten Digit Prediction</h1>
+        <div id="full-board">
+            <canvas id="board" width="280" height="280"></canvas>
+            <button id="clearButton">Clear Canvas</button>
+        </div>
+        <div id="predictions">
+            <div class="radial-progress" id="digit-0"></div>
+            <div class="radial-progress" id="digit-1"></div>
+            <div class="radial-progress" id="digit-2"></div>
+            <div class="radial-progress" id="digit-3"></div>
+            <div class="radial-progress" id="digit-4"></div>
+            <div class="radial-progress" id="digit-5"></div>
+            <div class="radial-progress" id="digit-6"></div>
+            <div class="radial-progress" id="digit-7"></div>
+            <div class="radial-progress" id="digit-8"></div>
+            <div class="radial-progress" id="digit-9"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
