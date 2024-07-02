@@ -70,6 +70,11 @@ loadModel().then(sess => {
     canvas.addEventListener("mousemove", canvasMouseMove);
     document.body.addEventListener("mouseup", bodyMouseUp);
     document.body.addEventListener("mouseout", bodyMouseOut);
+
+    canvas.addEventListener("touchstart", canvasMouseDown);
+    canvas.addEventListener("touchmove", canvasMouseMove);
+    document.body.addEventListener("touchend", bodyMouseUp);
+    document.body.addEventListener("touchcancel", bodyMouseOut);
     document.getElementById("clearButton").addEventListener("click", clearCanvas);
 });
 
